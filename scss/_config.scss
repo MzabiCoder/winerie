@@ -1,66 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;1,300&family=Playfair+Display&display=swap');
+
 nav {
     width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     text-align: center;
-    padding: 1.8rem;
+    padding: 1.7rem;
     position: fixed;
-    z-index: 1;
+    z-index: 10;
     color: white;
-    transition: all .5s ease-in-out;
-
-    &:hover {
-        background: white;
-
-        h1 a {
-            color: black
-        }
-
-        .list {
-
-            li,
-            a {
-                color: black;
-            }
-        }
-
-    }
-
+    transition: all .2s ease-in-out;
+    padding-bottom: 6rem;
+   
     h1 a {
         font-weight: bold;
         letter-spacing: .8rem;
         color: white;
+       
     }
 
 
-
-    .list {
+    .list-menu {
         display: flex;
         justify-content: center;
         align-items: center;
-
-
-
-        li {
-            color: white;
+      
+        z-index: 10;
+        
+        .list-menu-nested{
+            position: relative;
+            ul{
+                position: absolute;
+                top:20px;
+                left:0;
+                opacity: 0;
+                transition: all .1s ease-in-out; 
+                li,a{
+                    margin-top: .6rem;
+                }
+            }
         }
+
 
         a {
             margin-right: 1rem;
             color: white;
+            transition: all 1s ease-in-out;
+            position: relative;
+             
+            &::after{
+                content:"";
+                position: absolute;
+                bottom:0;
+                left:0;
+                width: 0%;
+                border-bottom: 1px solid #0e76a8;
+                transition: all .5s ease-in-out;
+            }
+            &:hover::after{
+               width: 100%;
+            }
         }
     }
 
+    &:hover {
+        background: white;
+        h1 a,li a {
+            color: #0e76a8
+        } 
+
+.list-menu .list-menu-nested ul{opacity: 1;}
+    }
 
 }
 
 #footer {
     width: 100%;
     padding: 2rem;
-    background: rgb(217, 238, 255);
+    background: white;
     margin: auto;
     text-align: center;
+    color:#0e76a8;
+
 
     .logo {
         width: 100px;
@@ -84,6 +106,7 @@ nav {
         text-align: center;
         align-items: center;
         padding-bottom: 3rem;
+        
 
 
         li {
@@ -91,16 +114,28 @@ nav {
             margin: .4rem;
             position: relative;
 
-
-
             a {
-                color: black;
+                position: relative;
+                color:#0e76a8;
+                &::after{
+                    content:"";
+                    position: absolute;
+                    bottom:0;
+                    left:0;
+                    width: 0%;
+                    border-bottom: 1px solid #0e76a8;
+                    transition: all .5s ease-in-out;
+                }
+                &:hover::after{
+                   width: 100%;
+                }
+
             }
         }
 
 
         .line {
-            background: black;
+            background: #0e76a8;
             height: .7px;
             width: 100%;
             margin-bottom: 1rem;
@@ -114,7 +149,4 @@ nav {
             margin: .6rem;
         }
     }
-
-
-
 }

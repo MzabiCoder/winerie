@@ -5,48 +5,87 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/main.css">
+ 
     <title>Home</title>
 </head>
 
 <body>
-
+    <div id="overlay">
+        <div class="logo">
+            <img src="https://images.squarespace-cdn.com/content/v1/573880e1b654f9749a5773c6/1526644544386-UPR6YU7ZQCVZ30Q1IN58/ke17ZwdGBToddI8pDm48kBKNb5TFhSXPNEWDu6cH_vUUqsxRUqqbr1mOJYKfIPR7LoDQ9mXPOjoJoqy81S2I8N_N4V1vUb5AoIIIbLZhVYxCRW4BPu10St3TBAUQYVKcyc0wsPPdfD3u-AOzlali9jeV356i_SU9NF9COh6Kuxhz6NpYe_bdLYlP4XdjDCHI/Wines_header_2018.png"
+                alt="">
+        </div>
+    </div>
 
     <header id="header1">
         <nav>
             <div id="title">
                 <h1><a href=""> WINERIES </a></h1>
             </div>
-            <ul class="list">
-                <li> <a href="" class="nested"> WHAT IS THE WINE</a>
-                    <ul class="nested2">
+            <ul class="list-menu">
+                <li class=list-menu-nested> <a href=""> WHAT IS THE WINE</a>
+                    <ul class="list-menu-nested">
                         <li> <a href=""> REGIONS</a></li>
                         <li> <a href=""> MEMBERSHIP</a></li>
                         <li> <a href=""> PRESS</a></li>
                     </ul>
                 </li>
-                <li> <a href=""> REGIONS</a></li>
-                <li> <a href=""> MEMBERSHIP</a></li>
+                <li> <a href=""> MEMBERSHIP</a>
+                    <li class=list-menu-nested> <a href=""> WHAT IS THE WINE</a>
+                        <ul class="list-menu-nested">
+                            <li> <a href=""> REGIONS</a></li>
+                            <li> <a href=""> MEMBERSHIP</a></li>
+                            <li> <a href=""> PRESS</a></li>
+                        </ul>
+                    </li>
+                </li>
                 <li> <a href=""> PRESS</a></li>
-
             </ul>
-            <ul class="list">
+            <ul class="list-menu">
                 <li> <a href=""> JOIN</a></li>
                 <li> <a href=""> LOGIN</a></li>
             </ul>
         </nav>
         <video autoplay muted id="video1" class="video1">
-            <source src="./videos/header1.mp4" type="video/mp4">
+            <source src="./videos/header2.mp4" type="video/mp4">
             </source>
 
         </video>
-        <!-- <div class="content">
+         
+    </header>
+    <section id="header2">
+        <div class="content">
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia corrupti minima quasi accusantium
                 quae dolores. Maxime repellendus quo dicta sed, architecto non qui. Tempore quasi sapiente nostrum,
                 quas magni voluptas!
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia corrupti minima
             </p>
-        </div> -->
-    </header>
+        </div>
+    </section>
+    <section id="header3">
+        <div class="content">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia corrupti minima quasi accusantium
+                quae dolores. Maxime repellendus quo dicta sed, architecto non qui. Tempore quasi sapiente nostrum,
+                quas magni voluptas!
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia corrupti minima
+            </p>
+        </div>
+    </section>
+    <section id="header4">
+        <video autoplay muted id="video1" class="video1">
+            <source src="./videos/header4.mp4" type="video/mp4">
+            </source>
+            <div class="content">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia corrupti minima quasi accusantium
+                    quae dolores. Maxime repellendus quo dicta sed, architecto non qui. Tempore quasi sapiente nostrum,
+                    quas magni voluptas!
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia corrupti minima
+                </p>
+            </div>
+        </video>
+         
+    </section>
+
     <footer id="footer">
         <div class="logo"> <img
                 src="https://images.squarespace-cdn.com/content/v1/573880e1b654f9749a5773c6/1526644544386-UPR6YU7ZQCVZ30Q1IN58/ke17ZwdGBToddI8pDm48kBKNb5TFhSXPNEWDu6cH_vUUqsxRUqqbr1mOJYKfIPR7LoDQ9mXPOjoJoqy81S2I8N_N4V1vUb5AoIIIbLZhVYxCRW4BPu10St3TBAUQYVKcyc0wsPPdfD3u-AOzlali9jeV356i_SU9NF9COh6Kuxhz6NpYe_bdLYlP4XdjDCHI/Wines_header_2018.png"
@@ -88,18 +127,26 @@
         </ul>
 
     </footer>
-    <div id="overlay">
-        <div class="logo">
-            <img src="https://images.squarespace-cdn.com/content/v1/573880e1b654f9749a5773c6/1526644544386-UPR6YU7ZQCVZ30Q1IN58/ke17ZwdGBToddI8pDm48kBKNb5TFhSXPNEWDu6cH_vUUqsxRUqqbr1mOJYKfIPR7LoDQ9mXPOjoJoqy81S2I8N_N4V1vUb5AoIIIbLZhVYxCRW4BPu10St3TBAUQYVKcyc0wsPPdfD3u-AOzlali9jeV356i_SU9NF9COh6Kuxhz6NpYe_bdLYlP4XdjDCHI/Wines_header_2018.png"
-                alt="">
-        </div>
-    </div>
+    
+    <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
     <script>
+        var controller = new ScrollMagic.Controller();
+        new ScrollMagic.Scene({
+                triggerElement: '.content'
+            })
+            .setClassToggle('.content', 'show')
+            .addTo(controller)
+    </script>
+    <script>
+        // window.addEventListener('load',()=>{
+        //     const preload=document.querySelector('#overlay')
+        //     preload.classList.add('finish')
+        // })
         setTimeout(() => {
-            document.querySelector('#overlay').style.opacity = 0
-            document.querySelector('#overlay').style.dispaly = 'hidden'
-            document.querySelector('#overlay').style.dispaly = 'none'
+            document.querySelector('#overlay').style.opacity = '0'
         }, 4000)
+         
+        
     </script>
 </body>
 
