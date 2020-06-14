@@ -1,18 +1,21 @@
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300&family=Playfair+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&display=swap');
 @import 'config';
+@import 'apply';
+@import 'events';
+@import 'mendoza';
 
 
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: 'Cormorant Garamond', serif;
-    font-family: 'Playfair Display', serif;
+    
 
 }
 
 body {
     line-height: 1.2;
+    font-family: 'Nanum Myeongjo', serif;
     
 }
 .wrapper{

@@ -1,47 +1,46 @@
-@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300&family=Playfair+Display&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;1,300&family=Playfair+Display&display=swap");
-nav {
+#nav {
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
   text-align: center;
-  padding: 1.7rem;
+  padding: 1rem 1.7rem;
   position: fixed;
   z-index: 100;
-  color: white;
-  transition: all .2s ease-in-out;
-  padding-bottom: 14rem; }
-  nav h1 a {
+  transition: all .3s ease-in-out;
+  background: white; }
+  #nav h1 a {
     font-weight: bold;
     letter-spacing: 1rem;
-    color: white;
+    color: #0e76a8;
     font-size: 2.3rem; }
-  nav .list-menu {
+  #nav .list-menu {
     display: flex;
     justify-content: center;
     align-items: center;
     z-index: 10; }
-    nav .list-menu .bold {
+    #nav .list-menu .bold {
       font-weight: bold;
       margin-right: 1.5rem; }
-    nav .list-menu .list-menu-nested {
+    #nav .list-menu .list-menu-nested {
       position: relative; }
-      nav .list-menu .list-menu-nested ul {
+      #nav .list-menu .list-menu-nested ul {
         position: absolute;
         top: 30px;
         left: 0;
         opacity: 0;
-        transition: all .1s ease-in-out; }
-        nav .list-menu .list-menu-nested ul li, nav .list-menu .list-menu-nested ul a {
+        transition: all .4s ease-in-out; }
+        #nav .list-menu .list-menu-nested ul li, #nav .list-menu .list-menu-nested ul a {
           margin-top: .3rem;
           margin-left: .3rem; }
-    nav .list-menu a {
+    #nav .list-menu a {
       margin-right: 1rem;
-      color: white;
+      color: #0e76a8;
       position: relative;
       z-index: 100; }
-      nav .list-menu a::after {
+      #nav .list-menu a::after {
         content: "";
         position: absolute;
         bottom: 0;
@@ -49,13 +48,12 @@ nav {
         width: 0%;
         border-bottom: 1px solid #0e76a8;
         transition: all .5s ease-in-out; }
-      nav .list-menu a:hover::after {
+      #nav .list-menu a:hover::after {
         width: 100%; }
-  nav:hover {
-    background: white; }
-    nav:hover h1 a, nav:hover li a {
-      color: #0e76a8; }
-    nav:hover .list-menu .list-menu-nested ul {
+  #nav:hover {
+    background: white;
+    padding-bottom: 14rem; }
+    #nav:hover .list-menu .list-menu-nested ul {
       opacity: 1; }
 
 #footer {
@@ -76,16 +74,13 @@ nav {
       object-fit: cover; }
   #footer .footer_wrapper {
     padding: 0rem 1rem 0;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-gap: 1rem;
+    display: flex;
+    justify-content: space-around;
     text-align: center;
     align-items: center;
     padding-bottom: 3rem; }
     #footer .footer_wrapper li {
-      padding-top: 2r;
-      margin: .4rem;
-      position: relative; }
+      margin: .4rem 0rem; }
       #footer .footer_wrapper li a {
         position: relative;
         color: #0e76a8; }
@@ -110,16 +105,16 @@ nav {
       margin: .6rem; }
 
 @media (max-width: 800px) {
-  nav {
+  #nav {
     background: white;
     padding: 2rem;
     position: fixed; }
-    nav h1 a {
+    #nav h1 a {
       position: absolute;
       color: #0e76a8;
       left: 50%;
       transform: translate(-50%, -50%); }
-    nav .list-menu {
+    #nav .list-menu {
       display: none; } }
 
 @media (max-width: 700px) {
@@ -128,21 +123,249 @@ nav {
     grid-template-columns: repeat(2, 1fr);
     justify-content: center;
     align-items: center;
-    text-align: center; } }
+    text-align: center; }
+    #footer .footer_wrapper ul p {
+      display: none; } }
 
 @media (max-width: 500px) {
   #footer .footer_wrapper {
-    grid-template-columns: 1fr; } }
+    grid-template-columns: 1fr; }
+    #footer .footer_wrapper ul p {
+      display: none; } }
+
+#apply {
+  height: 100vh;
+  width: 100%;
+  background: url("https://images.pexels.com/photos/33265/wine-bottle-wine-glasses-wine-ambience.jpg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940") center center/cover; }
+  #apply .content {
+    height: 100%;
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white; }
+    #apply .content .line {
+      width: 100%;
+      height: 2px;
+      margin-bottom: 1.3rem;
+      background: white; }
+    #apply .content p {
+      padding: 3rem 0;
+      font-size: 2rem; }
+    #apply .content h1 {
+      padding: 4rem 0;
+      font-size: 4rem; }
+    #apply .content h2 {
+      line-height: 1.8;
+      font-size: 2rem; }
+
+@media (max-width: 800px) {
+  #apply .content p, #apply .content h2 {
+    font-size: 1.5rem; }
+  #apply .content h1 {
+    font-size: 3rem; } }
+
+@media (max-width: 600px) {
+  p {
+    padding: 0rem;
+    margin-bottom: -4rem; }
+  h1 {
+    font-size: 2rem !important; } }
+
+#events {
+  padding: 9rem 4rem 2rem;
+  margin: auto;
+  text-align: center;
+  background: #e5eef3;
+  color: #0e76a8; }
+  #events p {
+    padding: 2rem 0; }
+  #events h1 {
+    font-size: 4rem;
+    padding-bottom: 2rem; }
+
+#events_gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 2rem;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding-bottom: 2rem; }
+  #events_gallery .event .line {
+    margin: 2rem auto !important;
+    height: 2px;
+    background: #0e76a8; }
+  #events_gallery .event h1 {
+    font-size: 2rem;
+    width: 80%;
+    margin: 1rem auto;
+    text-align: center; }
+  #events_gallery .event img {
+    width: 100%;
+    height: 320px;
+    object-fit: cover; }
+
+@media (max-width: 1300px) {
+  #events_gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); } }
+
+@media (max-width: 900px) {
+  #events p:nth-child(1) {
+    display: none; }
+  #events_gallery {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr); } }
+
+#mendoza {
+  width: 100%;
+  height: 100vh;
+  background: url("https://s32020.pcdn.co/wp-content/uploads/2019/04/Bodega-Zuccardi-Mendoza-1-1080x675.jpg") no-repeat center center/cover;
+  position: relative; }
+  #mendoza::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    bottom: 0;
+    top: 0;
+    background: rgba(0, 0, 0, 0.7); }
+  #mendoza h1 {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 7rem;
+    letter-spacing: 1.5rem;
+    z-index: 1; }
+
+#mendoza2 {
+  color: #0e76a8;
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: left; }
+  #mendoza2 .mendoza2_left {
+    flex: 5;
+    padding: 2rem;
+    border-right: 1px solid #0e76a8; }
+    #mendoza2 .mendoza2_left h1 {
+      padding-bottom: 2rem; }
+  #mendoza2 .mendoza2_right {
+    padding-top: 2.2rem;
+    flex: 1;
+    align-self: end;
+    padding-left: 2rem; }
+    #mendoza2 .mendoza2_right p {
+      padding: .5rem; }
+    #mendoza2 .mendoza2_right button {
+      margin: 1rem 0rem;
+      background: transparent;
+      border: none;
+      padding: .3rem 1rem;
+      border: 1px solid #0e76a8;
+      color: #0e76a8; }
+
+#mendoza3 {
+  padding: 2rem 3rem;
+  display: flex;
+  background: #e5eef3; }
+  #mendoza3 .mendoza3_left {
+    flex: 1;
+    display: flex; }
+    #mendoza3 .mendoza3_left img {
+      height: 65vh;
+      width: 400px;
+      margin-right: 1rem;
+      object-fit: cover; }
+  #mendoza3 .mendoza3_right {
+    padding: 1rem 2rem;
+    text-align: center;
+    color: #0e76a8; }
+    #mendoza3 .mendoza3_right h1 {
+      padding: 2rem; }
+
+#mendoza4 {
+  width: 100%;
+  padding: 2rem;
+  display: flex; }
+  #mendoza4 .content {
+    color: #0e76a8;
+    text-align: left;
+    border-top: 1px solid #0e76a8;
+    padding-top: 2rem;
+    flex: 1; }
+  #mendoza4 .test {
+    width: 100%;
+    height: 50vh;
+    position: relative;
+    flex: 2;
+    margin-left: 3rem; }
+    #mendoza4 .test video {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      object-fit: cover; }
+
+@media (max-width: 1200px) {
+  #mendoza2 {
+    flex-direction: column;
+    text-align: center;
+    align-items: center; }
+    #mendoza2 .mendoza2_right {
+      text-align: center;
+      margin: auto;
+      margin-top: -3rem; }
+  #mendoza3 {
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center; }
+  #mendoza h1 {
+    font-size: 5rem; } }
+
+@media (max-width: 800px) {
+  #mendoza2 .mendoza2_left h1 {
+    font-size: 1.5rem; }
+  #mendoza h1 {
+    font-size: 4rem; }
+  #mendoza3 .mendoza3_left {
+    flex-direction: column;
+    justify-content: center; }
+    #mendoza3 .mendoza3_left img {
+      height: 55vh;
+      width: 300px;
+      margin-bottom: 1rem; }
+  #mendoza3 .mendoza3_right p {
+    display: none; }
+  #mendoza4 {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center; }
+    #mendoza4 .test {
+      flex: 1; } }
+
+@media (max-width: 700px) {
+  #mendoza2 .mendoza2_left h1 {
+    font-size: 1.3rem !important; } }
 
 * {
   box-sizing: border-box;
   margin: 0;
-  padding: 0;
-  font-family: 'Cormorant Garamond', serif;
-  font-family: 'Playfair Display', serif; }
+  padding: 0; }
 
 body {
-  line-height: 1.2; }
+  line-height: 1.2;
+  font-family: 'Nanum Myeongjo', serif; }
 
 .wrapper {
   width: 100vw;

@@ -1,22 +1,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;1,300&family=Playfair+Display&display=swap');
+$main-color:#0e76a8;
+$second-color:#e5eef3;
 
-nav {
+#nav {
     width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     text-align: center;
-    padding: 1.7rem;
+    padding: 1rem 1.7rem;
     position: fixed;
     z-index: 100;
-    color: white;
-    transition: all .2s ease-in-out;
-    padding-bottom: 14rem;
+    transition: all .3s ease-in-out;
+    background: white;
+    
    
     h1 a {
         font-weight: bold;
         letter-spacing: 1rem;
-        color: white;
+        color: $main-color;
         font-size: 2.3rem;
     }
 
@@ -37,7 +39,7 @@ nav {
                 top:30px;
                 left:0;
                 opacity: 0;
-                transition: all .1s ease-in-out; 
+                transition: all .4s ease-in-out; 
                 li,a{
                     margin-top: .3rem;
                     margin-left: .3rem;
@@ -48,7 +50,7 @@ nav {
 
         a {
             margin-right: 1rem;
-            color: white;
+            color: $main-color;
             position: relative;
              z-index: 100;
             &::after{
@@ -68,9 +70,7 @@ nav {
 
     &:hover {
         background: white;
-        h1 a,li a {
-            color: #0e76a8
-        } 
+        padding-bottom: 14rem;
 
 .list-menu .list-menu-nested ul{opacity: 1;}
     }
@@ -102,19 +102,22 @@ nav {
 
     .footer_wrapper {
         padding: 0rem 1rem 0;
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        grid-gap: 1rem;
+        // display: grid;
+        // grid-template-columns: repeat(4, 1fr);
+        // grid-gap: 2rem;
+        // text-align: center;
+        // align-items: center;
+        // justify-content: center;
+        display: flex;
+        justify-content: space-around;
         text-align: center;
         align-items: center;
         padding-bottom: 3rem;
-        
-
-
+       
+ 
         li {
-            padding-top: 2r;
-            margin: .4rem;
-            position: relative;
+           
+            margin: .4rem 0rem;
 
             a {
                 position: relative;
@@ -154,7 +157,7 @@ nav {
 }
 
 @media (max-width:800px){
-    nav{
+    #nav{
         
         background: white;
         padding: 2rem;
@@ -180,6 +183,9 @@ nav {
         justify-content: center;
         align-items: center;
         text-align: center;
+        ul p{
+            display: none;
+        }
     } 
 }
 
@@ -188,6 +194,9 @@ nav {
     #footer .footer_wrapper{
 
      grid-template-columns: 1fr;
+       ul p{
+           display: none;
+       }
       
     } 
 }
