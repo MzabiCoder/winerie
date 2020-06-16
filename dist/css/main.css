@@ -295,20 +295,25 @@
 
 #mendoza4 {
   width: 100%;
-  padding: 2rem;
-  display: flex; }
+  height: 100%;
+  padding: 4rem 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
   #mendoza4 .content {
     color: #0e76a8;
     text-align: left;
     border-top: 1px solid #0e76a8;
     padding-top: 2rem;
-    flex: 1; }
+    flex: 1;
+    align-self: flex-start; }
   #mendoza4 .test {
     width: 100%;
     height: 50vh;
     position: relative;
     flex: 2;
-    margin-left: 3rem; }
+    margin-left: 3rem;
+    align-self: flex-start; }
     #mendoza4 .test video {
       width: 100%;
       height: 100%;
@@ -330,7 +335,19 @@
     text-align: center;
     align-items: center; }
   #mendoza h1 {
-    font-size: 5rem; } }
+    font-size: 5rem; }
+  #mendoza4 {
+    width: 100%;
+    height: 50vh;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
+    #mendoza4 .test {
+      width: 100%;
+      height: 100vh;
+      flex: 3; } }
 
 @media (max-width: 800px) {
   #mendoza2 .mendoza2_left h1 {
@@ -347,16 +364,400 @@
   #mendoza3 .mendoza3_right p {
     display: none; }
   #mendoza4 {
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center; }
+    flex-direction: column; }
     #mendoza4 .test {
-      flex: 1; } }
+      flex: 1;
+      align-items: center;
+      margin: auto; } }
 
 @media (max-width: 700px) {
   #mendoza2 .mendoza2_left h1 {
     font-size: 1.3rem !important; } }
+
+#about {
+  width: 100%;
+  width: 100%;
+  margin: auto;
+  text-align: center;
+  color: #0e76a8;
+  background: #e5eef3; }
+  #about .line {
+    width: 90%;
+    margin: 2rem auto;
+    height: 2px;
+    transition: .6s;
+    background: #e5eef3; }
+  #about #members {
+    padding: 3rem 0rem; }
+  #about #p {
+    padding: 8rem 3rem 0rem; }
+  #about #h1 {
+    font-size: 3rem;
+    padding: 3rem;
+    width: 70%;
+    margin: auto;
+    text-align: center; }
+  #about .container {
+    padding: 4rem 2rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 2rem;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: #e5eef3; }
+    #about .container .card {
+      position: relative;
+      border-top: 1px solid #0e76a8; }
+      #about .container .card h1 {
+        position: absolute;
+        top: 3rem;
+        transform: translateX(-50%, -50%); }
+      #about .container .card .face {
+        transition: all .7s ease-in-out; }
+      #about .container .card .face1 {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 1;
+        transition: .5s;
+        transform: translateY(120px); }
+        #about .container .card .face1:hover {
+          transform: translateY(0px); }
+      #about .container .card:hover .face1 {
+        opacity: 1; }
+      #about .container .card .face2 {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 2rem;
+        box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8); }
+        #about .container .card .face2 .content {
+          text-align: left; }
+          #about .container .card .face2 .content p {
+            padding: 0;
+            margin: 0; }
+          #about .container .card .face2 .content button {
+            margin: 15px 0 0;
+            display: inline-block;
+            font-weight: 900;
+            color: #333;
+            padding: 5px;
+            border: 1px solid #333; }
+
+@media (max-width: 1000px) {
+  #about .container {
+    grid-template-columns: repeat(2, 1fr); } }
+
+@media (max-width: 700px) {
+  #about #p {
+    visibility: hidden; }
+  #about #h1 {
+    font-size: 2rem !important; }
+  #about .container {
+    grid-template-columns: 1fr; } }
+
+#press {
+  padding: 9rem 4rem 2rem;
+  margin: auto;
+  text-align: center;
+  background: #e5eef3;
+  color: #0e76a8; }
+  #press h3 {
+    padding: 2rem 0; }
+  #press h1 {
+    font-size: 4rem; }
+  #press .press_container {
+    padding-top: 2rem;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    text-align: left;
+    align-items: center; }
+    #press .press_container .image img {
+      height: 90vh;
+      width: 40vw; }
+    #press .press_container .content {
+      align-self: start;
+      width: 70%;
+      border-top: 1px solid #0e76a8;
+      padding-top: 2rem; }
+      #press .press_container .content h2 {
+        font-size: 2.4rem; }
+
+#press_list {
+  padding: 3rem;
+  width: 100%;
+  max-width: 1300px;
+  margin: auto; }
+  #press_list .wrapper {
+    padding: 3rem 0;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 2rem;
+    color: #0e76a8; }
+    #press_list .wrapper .left img {
+      height: 100%;
+      width: 100%; }
+    #press_list .wrapper .right {
+      border-top: 1px solid #0e76a8;
+      padding-top: 2rem;
+      width: 70%;
+      text-align: left; }
+      #press_list .wrapper .right h1 {
+        font-size: 2rem; }
+
+@media (max-width: 1250px) {
+  #press_list .wrapper .right h1 {
+    font-size: 1.5rem; } }
+
+@media (max-width: 1000px) {
+  #press {
+    padding: 0rem 2rem; }
+    #press h3 {
+      display: none; }
+    #press h1 {
+      padding-top: 5rem; }
+    #press .press_container {
+      grid-template-columns: 1fr;
+      text-align: left;
+      align-items: center; }
+      #press .press_container .image {
+        padding-bottom: 2rem; }
+        #press .press_container .image img {
+          height: 100%;
+          width: 100%;
+          object-fit: cover; }
+      #press .press_container .content {
+        padding: 2rem;
+        text-align: center;
+        width: 100%; }
+        #press .press_container .content h2 {
+          font-size: 1.6rem; }
+  #press_list .wrapper {
+    grid-template-columns: 1fr;
+    justify-content: center;
+    align-items: center;
+    text-align: center; }
+    #press_list .wrapper .left img {
+      width: 70%;
+      height: 70%; }
+    #press_list .wrapper .right {
+      margin: auto;
+      text-align: center; }
+      #press_list .wrapper .right h1 {
+        font-size: 1.5rem; } }
+
+@media (max-width: 400px) {
+  #press .press_container .content h2 {
+    font-size: 1rem; }
+  #press_list .wrapper .right h1 {
+    font-size: 1rem !important; } }
+
+#prirati {
+  width: 100%;
+  height: 100vh;
+  background: url("https://images.pexels.com/photos/51947/tuscany-grape-field-nature-51947.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500") no-repeat center center/cover;
+  position: relative; }
+  #prirati::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    bottom: 0;
+    top: 0;
+    background: rgba(0, 0, 0, 0.6); }
+  #prirati h1 {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 7rem;
+    letter-spacing: 1.5rem;
+    z-index: 1; }
+
+#prirati_grid {
+  padding: 3rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 2.5rem;
+  grid-template-columns: repeat(3, 1fr) !important; }
+  #prirati_grid .content {
+    border-top: 1px solid #0e76a8;
+    padding: 2.5rem;
+    color: #0e76a8;
+    text-align: center;
+    align-items: center; }
+    #prirati_grid .content p {
+      font-size: 1.2rem; }
+    #prirati_grid .content h1 {
+      margin-bottom: 2rem; }
+  #prirati_grid .image-container img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%; }
+  #prirati_grid .one {
+    grid-row: 1/3; }
+  #prirati_grid .four {
+    grid-column: 2/4; }
+  #prirati_grid .nine {
+    grid-column: 2/4; }
+
+@media (max-width: 1200px) {
+  #prirati_grid .one {
+    grid-row: 1/3;
+    grid-column: 1/4; }
+  #prirati_grid .tow {
+    display: none; }
+  #prirati_grid .four {
+    grid-column: 3/4;
+    grid-row: 4/4; }
+  #prirati_grid .nine {
+    display: none; } }
+
+@media (max-width: 900px) {
+  #prirati_grid .one {
+    grid-row: 1/2;
+    grid-column: 1/4; }
+  #prirati_grid .three {
+    grid-column: 1/3;
+    grid-row: 2/2; }
+  #prirati_grid .six {
+    grid-column: 1/4; }
+  #prirati_grid .eight {
+    grid-column: 1/4; }
+  #prirati_grid .four {
+    grid-column: 2/4; } }
+
+@media (max-width: 800px) {
+  .hide {
+    display: none; }
+  #prirati_grid .one {
+    grid-row: 1/2;
+    grid-column: 1/4; }
+  #prirati_grid .three {
+    grid-column: 1/4;
+    grid-row: 2/2; }
+  #prirati_grid .six {
+    grid-column: 1/4; }
+  #prirati_grid .eight {
+    grid-column: 1/4; }
+    #prirati_grid .eight p:nth-child(1) {
+      display: none; }
+  #prirati_grid .four {
+    display: none; }
+  #prirati_grid .five {
+    display: none; }
+  #prirati_grid .seven {
+    grid-column: 1/4; } }
+
+#mosel {
+  width: 100%;
+  height: 100vh;
+  background: url("https://images.pexels.com/photos/39511/purple-grapes-vineyard-napa-valley-napa-vineyard-39511.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500") no-repeat center center/cover;
+  position: relative; }
+  #mosel::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    bottom: 0;
+    top: 0;
+    background: rgba(0, 0, 0, 0.6); }
+  #mosel h1 {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 7rem;
+    letter-spacing: 1.5rem;
+    z-index: 1; }
+
+#prirati_grid {
+  padding: 3rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 2.5rem;
+  grid-template-columns: repeat(3, 1fr) !important; }
+  #prirati_grid .content {
+    border-top: 1px solid #0e76a8;
+    padding: 2.5rem;
+    color: #0e76a8;
+    text-align: center;
+    align-items: center; }
+    #prirati_grid .content p {
+      font-size: 1.2rem; }
+    #prirati_grid .content h1 {
+      margin-bottom: 2rem; }
+  #prirati_grid .image-container img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%; }
+  #prirati_grid .one {
+    grid-row: 1/3; }
+  #prirati_grid .four {
+    grid-column: 2/4; }
+  #prirati_grid .nine {
+    grid-column: 2/4; }
+
+@media (max-width: 1200px) {
+  #prirati_grid .one {
+    grid-row: 1/3;
+    grid-column: 1/4; }
+  #prirati_grid .tow {
+    display: none; }
+  #prirati_grid .four {
+    grid-column: 3/4;
+    grid-row: 4/4; }
+  #prirati_grid .nine {
+    display: none; } }
+
+@media (max-width: 900px) {
+  #prirati_grid .one {
+    grid-row: 1/2;
+    grid-column: 1/4; }
+  #prirati_grid .three {
+    grid-column: 1/3;
+    grid-row: 2/2; }
+  #prirati_grid .six {
+    grid-column: 1/4; }
+  #prirati_grid .eight {
+    grid-column: 1/4; }
+  #prirati_grid .four {
+    grid-column: 2/4; } }
+
+@media (max-width: 800px) {
+  .hide {
+    display: none; }
+  #prirati_grid .one {
+    grid-row: 1/2;
+    grid-column: 1/4; }
+  #prirati_grid .three {
+    grid-column: 1/4;
+    grid-row: 2/2; }
+  #prirati_grid .six {
+    grid-column: 1/4; }
+  #prirati_grid .eight {
+    grid-column: 1/4; }
+    #prirati_grid .eight p:nth-child(1) {
+      display: none; }
+  #prirati_grid .four {
+    display: none; }
+  #prirati_grid .five {
+    display: none; }
+  #prirati_grid .seven {
+    grid-column: 1/4; } }
 
 * {
   box-sizing: border-box;
@@ -366,12 +767,6 @@
 body {
   line-height: 1.2;
   font-family: 'Nanum Myeongjo', serif; }
-
-.wrapper {
-  width: 100vw;
-  height: 100%;
-  overflow-y: scroll;
-  scroll-snap-type: y mandatory; }
 
 #header1, #header2, #header3, #header4 {
   scroll-snap-align: center; }
@@ -393,8 +788,8 @@ img {
   right: 0;
   background: #928e8b;
   width: 100%;
-  height: 100vh;
-  z-index: 5;
+  height: 100%;
+  z-index: 200;
   display: flex;
   justify-content: center;
   align-items: center;

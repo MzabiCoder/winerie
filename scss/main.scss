@@ -3,6 +3,10 @@
 @import 'apply';
 @import 'events';
 @import 'mendoza';
+@import 'about';
+@import 'press';
+@import 'prirati';
+@import 'mosel';
 
 
 * {
@@ -18,14 +22,7 @@ body {
     font-family: 'Nanum Myeongjo', serif;
     
 }
-.wrapper{
-    width: 100vw;
-    height: 100%;
-    overflow-y: scroll; 
-    scroll-snap-type: y mandatory;
-    
-
-}
+ 
 #header1,#header2,#header3,#header4{
     scroll-snap-align: center;
 }
@@ -50,8 +47,8 @@ img {
     right: 0;
     background: rgb(146, 142, 139);
     width: 100%;
-    height: 100vh;
-    z-index: 5;
+    height: 100%;
+    z-index: 200;
     display: flex;
     justify-content: center;
     align-items: center;
