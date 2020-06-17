@@ -2,6 +2,12 @@ setTimeout(() => {
     document.querySelector('#overlay').style.opacity = '0'
 }, 3000)
 
+//AOS library effect on scroll 
+
+
+
+
+
 // Scroll Magic
 
 let controller = new ScrollMagic.Controller();
@@ -77,4 +83,15 @@ sr.reveal('#prirati_grid .image-container', {
     duration: 4500,
     origin: 'bottom',
     distance: '20px'
+});
+
+sr.reveal('#apply p,#apply h1,#apply h2', {
+    duration: 2500,
+    origin: 'bottom',
+    distance: '40px'
+});
+sr.reveal('#events_gallery .event img', {
+    duration: 2000,
+    origin: 'bottom',
+    distance: '40px'
 });

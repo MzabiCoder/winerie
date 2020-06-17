@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/main.css">
     <script src="https://unpkg.com/scrollreveal"></script>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
     <title>About us</title>
 </head>
@@ -36,9 +37,9 @@
 
             <li class=list-menu-nested> <a href="" class="bold">MEMBERSHIP</a>
                 <ul class="list-menu-nested">
-                    <li> <a href="">Aplly</a></li>
+                    <li> <a href="./apply.html">Aplly</a></li>
                     <li> <a href="./events.html">Events</a></li>
-                    <li> <a href="">About us</a></li>
+                    <li> <a href="./aboout.html">About us</a></li>
 
                 </ul>
             </li>
@@ -65,7 +66,7 @@
         <div class="line"></div>
         <h1 id="members">A FEW OF OUR MEMBERS</h1>
         <div class="container">
-            <div class="card">
+            <div class="card" data-aos="fade-left">
                 <h1>James Smith</h1>
                 <div class="face face1">
                     <div class="content">
@@ -85,7 +86,7 @@
                     </div>
                 </div>
             </div>
-            <div class="card">
+            <div class="card" data-aos="fade-left">
                 <h1>Jhon Doe</h1>
                 <div class="face face1">
                     <div class="content">
@@ -104,7 +105,7 @@
                     </div>
                 </div>
             </div>
-            <div class="card">
+            <div class="card" data-aos="fade-left">
                 <h1>Fred Adam</h1>
                 <div class="face face1">
                     <div class="content">
@@ -124,7 +125,7 @@
                 </div>
             </div>
 
-            <div class="card">
+            <div class="card" data-aos="fade-right">
                 <h1>Megie james</h1>
                 <div class="face face1">
                     <div class="content">
@@ -143,7 +144,7 @@
                     </div>
                 </div>
             </div>
-            <div class="card">
+            <div class="card" data-aos="fade-right">
                 <h1>Lauren Adams</h1>
                 <div class="face face1">
                     <div class="content">
@@ -162,7 +163,7 @@
                     </div>
                 </div>
             </div>
-            <div class="card">
+            <div class="card" data-aos="fade-right">
                 <h1>Jennifer hooks</h1>
                 <div class="face face1">
                     <div class="content">
@@ -186,7 +187,7 @@
         <div class="line"></div>
         <h1 id="members">WINEMAKERS</h1>
         <div class="container">
-            <div class="card">
+            <div class="card" data-aos="fade-left">
                 <h1>Claudia Smith</h1>
                 <div class="face face1">
                     <div class="content">
@@ -199,14 +200,14 @@
                         <p>Born in upstate NY, Carlos grew up in Ecuador then moved back to the US after high school.
                             After an initial career in investment banking he worked with a variety of start-up ventures
                             in various industries all over the world. He is currently at a DC-based boutique investment
-                            bank that he co-founded 20 years ago, while enjoying life in Reston, VA with his wife and 2
+                            his wife and 2
                             daughters.
-
+                        </p>
 
                     </div>
                 </div>
             </div>
-            <div class="card">
+            <div class="card" data-aos="fade-left">
                 <h1>James Doe</h1>
                 <div class="face face1">
                     <div class="content">
@@ -225,7 +226,7 @@
                     </div>
                 </div>
             </div>
-            <div class="card">
+            <div class="card" data-aos="fade-left">
                 <h1>Jael Adam</h1>
                 <div class="face face1">
                     <div class="content">
@@ -245,7 +246,7 @@
                 </div>
             </div>
 
-            <div class="card">
+            <div class="card" data-aos="fade-right">
                 <h1>Joel james</h1>
                 <div class="face face1">
                     <div class="content">
@@ -264,7 +265,7 @@
                     </div>
                 </div>
             </div>
-            <div class="card">
+            <div class="card" data-aos="fade-right">
                 <h1>Janat Adams</h1>
                 <div class="face face1">
                     <div class="content">
@@ -283,7 +284,7 @@
                     </div>
                 </div>
             </div>
-            <div class="card">
+            <div class="card" data-aos="fade-right">
                 <h1>Maria hooks</h1>
                 <div class="face face1">
                     <div class="content">
@@ -360,7 +361,14 @@
 
 
     <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script src="../js//main.js"></script>
+    <script>
+        AOS.init({
+            offset: 400,
+            duration: 1000
+        });
+    </script>
 
 </body>
 
