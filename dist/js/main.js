@@ -1,6 +1,6 @@
-setTimeout(() => {
-    document.querySelector('#overlay').style.opacity = '0'
-}, 3000)
+// setTimeout(() => {
+//     document.querySelector('#overlay').style.opacity = '0'
+// }, 3000)
 
 //AOS library effect on scroll 
 
@@ -25,21 +25,63 @@ new ScrollMagic.Scene({
     .setClassToggle('#header3 .content', 'show')
     .addTo(controller)
 
-
 new ScrollMagic.Scene({
-        triggerElement: '#image-container',
+        triggerElement: '#header3 .content',
+
     })
-    .setClassToggle('#image-container', 'opac')
+    .setClassToggle('#header3 .content', 'show')
     .addTo(controller)
 
 
 
+
+
+
 new ScrollMagic.Scene({
-        triggerElement: '.mendoza3_left img',
+        triggerElement: '#header1',
+        duration: 561,
+        triggerHook: "onLeave"
+
 
     })
-    .setClassToggle('.mendoza3_left img', 'opacity')
+    .setClassToggle('#hidden_menu li:nth-child(1)', 'header')
+
+new ScrollMagic.Scene({
+        triggerElement: '#header2',
+        duration: 561
+
+    })
+    .setClassToggle('#hidden_menu li:nth-child(2)', 'header')
     .addTo(controller)
+
+new ScrollMagic.Scene({
+        triggerElement: '#header3',
+        duration: 561
+
+    })
+    .setClassToggle('#hidden_menu li:nth-child(3)', 'header')
+    .addTo(controller)
+
+
+new ScrollMagic.Scene({
+        triggerElement: '#header4',
+        duration: 561
+
+    })
+    .setClassToggle('#hidden_menu li:nth-child(4)', 'header')
+    .addTo(controller)
+
+new ScrollMagic.Scene({
+        triggerElement: 'footer',
+        duration: 561
+
+    })
+    .setClassToggle('#hidden_menu li:nth-child(5)', 'header')
+    .addTo(controller)
+
+
+
+
 
 // events on scrolling 
 window.sr = ScrollReveal();
@@ -95,3 +137,27 @@ sr.reveal('#events_gallery .event img', {
     origin: 'bottom',
     distance: '40px'
 });
+
+// overswer
+
+// let sections = document.querySelectorAll('.sections')
+// const bumble = document.querySelector('#bumble')
+
+// const options = {
+//     threshold: .9
+// }
+// let observer = new IntersectionObserver(navChek, options)
+
+// function navChek(entries) {
+//     entries.forEach(e => {
+//         const entry = e.target.id
+//         const activeA = document.querySelector(`[data-page=${entry}]`)
+//         const gradient = entry.target.getAttribute('data-index')
+//         //activeA.style.color = 'red'
+//         console.log(activeA);
+
+//     })
+// }
+// sections.forEach(section => {
+//     observer.observe(section)
+// })
