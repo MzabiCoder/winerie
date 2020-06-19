@@ -32,6 +32,13 @@ new ScrollMagic.Scene({
     .setClassToggle('#header3 .content', 'show')
     .addTo(controller)
 
+new ScrollMagic.Scene({
+        triggerElement: '#winemaking .content',
+
+    })
+    .setClassToggle('#winemaking .content', 'show')
+    .addTo(controller)
+
 
 
 
@@ -55,7 +62,7 @@ new ScrollMagic.Scene({
     .addTo(controller)
 
 new ScrollMagic.Scene({
-        triggerElement: '#header3',
+        triggerElement: '#idea',
         duration: 561
 
     })
@@ -64,15 +71,16 @@ new ScrollMagic.Scene({
 
 
 new ScrollMagic.Scene({
-        triggerElement: '#header4',
+        triggerElement: '#header3',
         duration: 561
 
     })
     .setClassToggle('#hidden_menu li:nth-child(4)', 'header')
     .addTo(controller)
 
+
 new ScrollMagic.Scene({
-        triggerElement: 'footer',
+        triggerElement: '#header4',
         duration: 561
 
     })
@@ -80,12 +88,66 @@ new ScrollMagic.Scene({
     .addTo(controller)
 
 
+new ScrollMagic.Scene({
+        triggerElement: '#winemaking',
+        duration: 561
+
+    })
+    .setClassToggle('#hidden_menu li:nth-child(6)', 'header')
+    .addTo(controller)
+
+
+new ScrollMagic.Scene({
+        triggerElement: '#header5',
+        duration: 561
+
+    })
+    .setClassToggle('#hidden_menu li:nth-child(7)', 'header')
+    .addTo(controller)
+
+new ScrollMagic.Scene({
+        triggerElement: 'footer',
+        duration: 561
+
+    })
+    .setClassToggle('#hidden_menu li:nth-child(8)', 'header')
+    .addTo(controller)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+new ScrollMagic.Scene({
+        triggerElement: '#header2'
+
+
+    })
+    .setClassToggle('#hidden_menu', 'visible')
+    .addTo(controller)
+
+
+
+
+
+
+
 
 
 
 // events on scrolling 
 window.sr = ScrollReveal();
-sr.reveal('footer', {
+sr.reveal('footer .logo , footer .footer_wrapper', {
     duration: 1000,
     origin: 'bottom',
     distance: '60px'
@@ -137,27 +199,26 @@ sr.reveal('#events_gallery .event img', {
     origin: 'bottom',
     distance: '40px'
 });
+sr.reveal('#nav #title,#nav .list-menu,#hidden_menu li a ', {
+    duration: 1500,
+    origin: 'bottom',
+    distance: '20px'
+});
 
-// overswer
 
-// let sections = document.querySelectorAll('.sections')
-// const bumble = document.querySelector('#bumble')
+sr.reveal('#press .press_container .image', {
+    duration: 3000,
+    origin: 'left',
+    distance: '100px'
+});
+sr.reveal('#press .press_container .content', {
+    duration: 3000,
+    origin: 'right',
+    distance: '100px'
+});
 
-// const options = {
-//     threshold: .9
-// }
-// let observer = new IntersectionObserver(navChek, options)
-
-// function navChek(entries) {
-//     entries.forEach(e => {
-//         const entry = e.target.id
-//         const activeA = document.querySelector(`[data-page=${entry}]`)
-//         const gradient = entry.target.getAttribute('data-index')
-//         //activeA.style.color = 'red'
-//         console.log(activeA);
-
-//     })
-// }
-// sections.forEach(section => {
-//     observer.observe(section)
-// })
+sr.reveal('#press_list .wrapper', {
+    duration: 3000,
+    origin: 'bottom',
+    distance: '100px'
+});

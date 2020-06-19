@@ -9,6 +9,7 @@
 @import "prirati";
 @import "mosel";
 @import "regions";
+@import 'membership';
 
 * {
     box-sizing: border-box;
@@ -23,6 +24,8 @@ html {
 body {
     line-height: 1.2;
     font-family: "Cormorant Garamond", serif;
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
 
 }
 
@@ -81,6 +84,7 @@ img {
     }
 }
 
+#idea,
 #header1 {
     width: 100%;
     height: 100vh;
@@ -168,6 +172,34 @@ img {
     }
 }
 
+#winemaking {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    background: url("https://images.pexels.com/photos/255483/pexels-photo-255483.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500") no-repeat center center / cover;
+
+    .content {
+        position: absolute;
+        right: 0.2rem;
+        bottom: 4rem;
+        z-index: 1;
+        color: white;
+        width: 60%;
+        line-height: 1.3;
+        opacity: 0;
+        transition: all 0.7s ease-in-out;
+
+        p {
+            font-size: 2rem;
+        }
+
+        &.show {
+            opacity: 1;
+        }
+    }
+}
+
+#header5,
 #header4 {
     width: 100%;
     height: 100vh;
@@ -208,12 +240,13 @@ img {
     left: 35px;
     z-index: 100;
     transition: .7s ease-in-out;
-
+    opacity: 0;
 
 
     li {
         padding-bottom: .2rem;
         position: relative;
+        transition: .3 ease-in-out;
 
 
         a {
@@ -239,21 +272,29 @@ img {
 
     }
 
+    &.visible {
+        opacity: 1;
+    }
+
+}
+
+.header {
+
+
+    &:after {
+        content: "";
+        position: absolute;
+        left: 0;
+        border-bottom: 2px solid white;
+        width: 100%;
+        top: 0;
+        bottom: 0;
+        transition: .7s;
+    }
 
 
 }
 
-.header:after {
-    content: "";
-    position: absolute;
-    left: 0;
-    border-bottom: 1px solid white;
-    width: 100%;
-    top: 0;
-    bottom: 0;
-    transition: .7s;
-
-}
 
 
 
@@ -277,6 +318,7 @@ img {
 @media (max-width: 800px) {
 
     #header2 .content,
+    #winemaking .content,
     #header3 .content {
         top: 50%;
         left: 50%;
@@ -293,6 +335,7 @@ img {
 @media (max-width: 600px) {
 
     #header2 .content,
+    #winemaking .content,
     #header3 .content {
         top: 50%;
         left: 50%;

@@ -54,7 +54,7 @@
         width: 100%; }
   #nav:hover {
     background: #f1f0f0;
-    padding-bottom: 14rem; }
+    padding-bottom: 13rem; }
     #nav:hover .list-menu .list-menu-nested ul {
       opacity: 1; }
 
@@ -409,7 +409,7 @@
     width: 90%;
     margin: 2rem auto;
     height: 2px;
-    transition: .6s;
+    transition: 0.6s;
     background: #e5eef3; }
   #about #members {
     padding: 3rem 0rem; }
@@ -438,14 +438,14 @@
         top: 3rem;
         transform: translateX(-50%, -50%); }
       #about .container .card .face {
-        transition: all .7s ease-in-out; }
+        transition: all 0.7s ease-in-out; }
       #about .container .card .face1 {
         position: relative;
         display: flex;
         justify-content: center;
         align-items: center;
         z-index: 1;
-        transition: .5s;
+        transition: 0.5s;
         transform: translateY(120px); }
         #about .container .card .face1:hover {
           transform: translateY(0px); }
@@ -896,6 +896,106 @@
   #regions h1 {
     font-size: 2rem; } }
 
+#membership {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: #e5eef3;
+  padding-top: 2rem; }
+  #membership .form,
+  #membership .container {
+    width: 70%;
+    margin: 0 auto;
+    padding-top: 2rem !important; }
+  #membership .container {
+    color: #0e76a8; }
+    #membership .container h1 {
+      font-size: 3rem;
+      padding: 1rem; }
+    #membership .container h2 {
+      font-size: 1.7rem; }
+  #membership .form {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 2rem;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 2rem;
+    background: white;
+    margin: 2rem 0rem; }
+    #membership .form .form-control {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: #0e76a8; }
+      #membership .form .form-control input {
+        background: none;
+        border: none;
+        display: block;
+        margin: 1rem 0rem;
+        border-bottom: 1px solid #0e76a8;
+        width: 100%;
+        text-align: center;
+        padding: .5rem 0;
+        outline: none; }
+        #membership .form .form-control input::-webkit-input-placeholder {
+          color: #0e76a8;
+          opacity: .5; }
+    #membership .form #button {
+      background: white;
+      border: 1px solid #0e76a8;
+      text-align: center;
+      padding: .5rem;
+      display: inline-block;
+      margin: 1rem auto;
+      color: #0e76a8;
+      cursor: pointer;
+      transition: .5s ease-in-out; }
+      #membership .form #button:hover {
+        background: none; }
+
+@media (max-width: 1000px) {
+  #membership .form {
+    grid-template-columns: 1fr;
+    padding: 2rem; }
+    #membership .form .container {
+      color: #0e76a8; }
+      #membership .form .container h1 {
+        display: none; }
+      #membership .form .container h2 {
+        font-size: 2rem; } }
+
+@media (max-width: 800px) {
+  #membership .form .form-control {
+    margin: 0;
+    padding: 0;
+    width: 50%;
+    margin: auto;
+    margin-bottom: -1.6rem; }
+    #membership .form .form-control input {
+      margin: .5rem;
+      padding: .5rem; }
+      #membership .form .form-control input::-webkit-input-placeholder {
+        color: #0e76a8;
+        opacity: .5;
+        font-size: .7rem; }
+    #membership .form .form-control label {
+      font-size: .8rem; }
+  #membership .container {
+    margin-bottom: 2rem !important;
+    color: #0e76a8; }
+    #membership .container h1 {
+      font-size: 2rem; }
+    #membership .container h2 {
+      display: none; } }
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -906,7 +1006,9 @@ html {
 
 body {
   line-height: 1.2;
-  font-family: "Cormorant Garamond", serif; }
+  font-family: "Cormorant Garamond", serif;
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll; }
 
 #header1,
 #header2,
@@ -952,16 +1054,19 @@ img {
   to {
     transform: rotate(360deg); } }
 
+#idea,
 #header1 {
   width: 100%;
   height: 100vh;
   position: relative;
   z-index: 1; }
+  #idea #video1,
   #header1 #video1 {
     width: 100%;
     height: 100%;
     position: absolute;
     object-fit: cover; }
+  #idea .content,
   #header1 .content {
     position: absolute;
     right: 0.2rem;
@@ -971,8 +1076,10 @@ img {
     line-height: 1.3;
     transform: translateY(400%);
     transition: all 0.7s ease-in-out; }
+    #idea .content p,
     #header1 .content p {
       font-size: 2rem; }
+    #idea .content .move_up,
     #header1 .content .move_up {
       transform: translateY(0%); }
 
@@ -1016,15 +1123,38 @@ img {
     #header3 .content.show {
       opacity: 1; }
 
+#winemaking {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  background: url("https://images.pexels.com/photos/255483/pexels-photo-255483.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500") no-repeat center center/cover; }
+  #winemaking .content {
+    position: absolute;
+    right: 0.2rem;
+    bottom: 4rem;
+    z-index: 1;
+    color: white;
+    width: 60%;
+    line-height: 1.3;
+    opacity: 0;
+    transition: all 0.7s ease-in-out; }
+    #winemaking .content p {
+      font-size: 2rem; }
+    #winemaking .content.show {
+      opacity: 1; }
+
+#header5,
 #header4 {
   width: 100%;
   height: 100vh;
   position: relative; }
+  #header5 #video1,
   #header4 #video1 {
     width: 100%;
     height: 100%;
     position: absolute;
     object-fit: cover; }
+  #header5 .content,
   #header4 .content {
     position: absolute;
     right: 0.2rem;
@@ -1035,8 +1165,10 @@ img {
     line-height: 1.3;
     transform: translateY(0%);
     transition: all 0.7s ease-in-out; }
+    #header5 .content p,
     #header4 .content p {
       font-size: 2rem; }
+    #header5 .content .show,
     #header4 .content .show {
       transform: translateY(0%); }
 
@@ -1045,10 +1177,12 @@ img {
   bottom: 15px;
   left: 35px;
   z-index: 100;
-  transition: .7s ease-in-out; }
+  transition: .7s ease-in-out;
+  opacity: 0; }
   #hidden_menu li {
     padding-bottom: .2rem;
-    position: relative; }
+    position: relative;
+    transition: .3 ease-in-out; }
     #hidden_menu li a {
       font-size: 1.2rem;
       color: white;
@@ -1064,12 +1198,14 @@ img {
         top: 0;
         bottom: 0;
         transition: .7s; }
+  #hidden_menu.visible {
+    opacity: 1; }
 
 .header:after {
   content: "";
   position: absolute;
   left: 0;
-  border-bottom: 1px solid white;
+  border-bottom: 2px solid white;
   width: 100%;
   top: 0;
   bottom: 0;
@@ -1085,24 +1221,28 @@ img {
 
 @media (max-width: 800px) {
   #header2 .content,
+  #winemaking .content,
   #header3 .content {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     transition: none; }
     #header2 .content p,
+    #winemaking .content p,
     #header3 .content p {
       font-size: 2rem;
       text-align: center; } }
 
 @media (max-width: 600px) {
   #header2 .content,
+  #winemaking .content,
   #header3 .content {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     transition: none; }
     #header2 .content p,
+    #winemaking .content p,
     #header3 .content p {
       font-size: 1.5rem;
       text-align: center; } }
