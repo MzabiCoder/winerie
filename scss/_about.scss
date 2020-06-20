@@ -1,0 +1,125 @@
+#about {
+  width: 100%;
+  width: 100%;
+  margin: auto;
+  text-align: center;
+  color: $main-color;
+  background: $second-color;
+  overflow-x: hidden;
+
+  .line {
+    width: 90%;
+    margin: 2rem auto;
+    height: 2px;
+    transition: 0.6s;
+    background: $second-color;
+  }
+
+  #members {
+    padding: 3rem 0rem;
+  }
+
+  #p {
+    padding: 8rem 3rem 0rem;
+  }
+
+  #h1 {
+    font-size: 3rem;
+    padding: 3rem;
+    width: 70%;
+    margin: auto;
+    text-align: center;
+  }
+
+  .container {
+    padding: 4rem 2rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 2rem;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: $second-color;
+    .card {
+      position: relative;
+      border-top: 1px solid $main-color;
+
+      h1 {
+        position: absolute;
+        top: 3rem;
+        transform: translateX(-50%, -50%);
+      }
+
+      .face {
+        transition: all 0.7s ease-in-out;
+      }
+
+      .face1 {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 1;
+        transition: 0.5s;
+        transform: translateY(120px);
+
+        &:hover {
+          transform: translateY(0px);
+        }
+      }
+
+      &:hover .face1 {
+        opacity: 1;
+      }
+
+      .face2 {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 2rem;
+        box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
+
+        .content {
+          p {
+            padding: 0;
+            margin: 0;
+          }
+
+          text-align: left;
+
+          button {
+            margin: 15px 0 0;
+            display: inline-block;
+            font-weight: 900;
+            color: #333;
+            padding: 5px;
+            border: 1px solid #333;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1000px) {
+  #about .container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 700px) {
+  #about {
+    #p {
+      visibility: hidden;
+    }
+
+    #h1 {
+      font-size: 2rem !important;
+    }
+
+    .container {
+      grid-template-columns: 1fr;
+    }
+  }
+}
