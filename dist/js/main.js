@@ -223,18 +223,18 @@ sr.reveal('#press_list .wrapper', {
     distance: '100px'
 });
 
-// sr.reveal('#login .container,#membership .container', {
-//     duration: 3000,
-//     origin: 'left',
-//     distance: '100px'
-// });
+sr.reveal('#login .container,#membership .container', {
+    duration: 3000,
+    origin: 'left',
+    distance: '100px'
+});
 
 
-// sr.reveal('#login .form,#membership .form', {
-//     duration: 3000,
-//     origin: 'right',
-//     distance: '100px'
-// });
+sr.reveal('#login .form,#membership .form', {
+    duration: 3000,
+    origin: 'right',
+    distance: '100px'
+});
 
 const btn = document.querySelector('#ham')
 const general = document.querySelector('#general')
