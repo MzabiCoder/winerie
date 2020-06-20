@@ -152,11 +152,11 @@ sr.reveal('footer .logo , footer .footer_wrapper', {
     origin: 'bottom',
     distance: '60px'
 });
-sr.reveal('nav', {
-    duration: 2000,
-    origin: 'top',
-    distance: '20px'
-});
+// sr.reveal('nav', {
+//     duration: 2000,
+//     origin: 'top',
+//     distance: '20px'
+// });
 
 sr.reveal('#mendoza h1', {
     duration: 2500,
@@ -199,11 +199,11 @@ sr.reveal('#events_gallery .event img', {
     origin: 'bottom',
     distance: '40px'
 });
-sr.reveal('#nav #title,#nav .list-menu,#hidden_menu li a ', {
-    duration: 1500,
-    origin: 'bottom',
-    distance: '20px'
-});
+// sr.reveal('#nav #title,#nav .list-menu,#hidden_menu li a ', {
+//     duration: 1500,
+//     origin: 'bottom',
+//     distance: '20px'
+// });
 
 
 sr.reveal('#press .press_container .image', {
@@ -222,3 +222,39 @@ sr.reveal('#press_list .wrapper', {
     origin: 'bottom',
     distance: '100px'
 });
+
+// sr.reveal('#login .container,#membership .container', {
+//     duration: 3000,
+//     origin: 'left',
+//     distance: '100px'
+// });
+
+
+// sr.reveal('#login .form,#membership .form', {
+//     duration: 3000,
+//     origin: 'right',
+//     distance: '100px'
+// });
+
+const btn = document.querySelector('#ham')
+const general = document.querySelector('#general')
+const ul = document.querySelector('#general ul')
+let showMenu = false;
+btn.addEventListener('click', () => {
+
+    if (!showMenu) {
+
+        general.classList.add('show-general')
+        ul.classList.add('show-general')
+        btn.classList.add('close')
+        showMenu = true
+    } else {
+        general.classList.remove('show-general')
+        btn.classList.remove('close')
+        ul.classList.remove('show-general')
+        showMenu = false
+    }
+
+
+
+})

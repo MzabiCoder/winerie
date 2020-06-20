@@ -7,14 +7,37 @@
     <link rel="stylesheet" href="../css/main.css">
     <script src="https://unpkg.com/scrollreveal"></script>
 
-    <title>Regions</title>
+    <title>Membership</title>
 </head>
+<style>
+    .form-control small {
+        color: red;
+        transition: .8s ease-in-out;
+        opacity: 0;
+
+    }
+</style>
 
 <body>
 
 
 
     <nav id="nav">
+        <div id="ham">
+            <div class="lin"></div>
+            <div class="lin"></div>
+        </div>
+        <div id="general">
+            <ul class="menu-general">
+                <li> <a href="../index.html"> Who We Are</a></li>
+                <li> <a href="regions.html">Regions</a></li>
+                <li> <a href="press.html">Press</a></li>
+                <li> <a href="apply.html">Apply</a></li>
+                <li> <a href="about.html"> About</a></li>
+                <li> <a href="login.html"> Login</a></li>
+                <li> <a href="join.html"> Membership</a></li>
+            </ul>
+        </div>
         <div id="title">
             <h1><a href="../index.html"> WINES </a></h1>
         </div>
@@ -64,32 +87,38 @@
             <h2>To speak with a representative from The Vines, please email us at veritas@the-vines.com.
                 We are also available by phone at +1 707 244 4545, or through Whatsapp and Instagram.</h2>
         </div>
-        <div class="form">
+        <div class="form" id="form">
             <div class="form-control">
-                <input type="text" placeholder="Enter your first name">
+                <input type="text" id="fname" placeholder="Enter your first name">
                 <label for="">FIRST NAME</label>
+                <small></small>
             </div>
             <div class="form-control">
-                <input type="text" placeholder="Enter your last name">
+                <input type="text" id="lname" placeholder="Enter your last name">
                 <label for="">LAST NAME</label>
+                <small></small>
             </div>
             <div class="form-control">
-                <input type="text" placeholder="Enter city where you are from">
+                <input type="text" id="city" placeholder="Enter city where you are from">
                 <label for="">CITY WHERE YOU ARE FROM</label>
+                <small></small>
             </div>
             <div class="form-control">
-                <input type="text" placeholder="Enter city where you live">
+                <input type="text" id="live" placeholder="Enter city where you live">
                 <label for="">CITY WHERE YOU LIVE</label>
+                <small></small>
             </div>
             <div class="form-control">
-                <input type="text" placeholder="Enter your phone number">
+                <input type="text" id="phone" placeholder="Enter your phone number">
                 <label for="">PHONE NUMBER</label>
+                <small></small>
             </div>
             <div class="form-control">
-                <input type="text" placeholder="Enter your email">
+                <input type="text" id="email" placeholder="Enter your email">
                 <label for="">EMAIL</label>
+                <small></small>
             </div>
-            <button id="button">SUBMIT</button>
+            <button id="button" type="submit">SUBMIT</button>
         </div>
 
     </section>
@@ -145,5 +174,23 @@
     <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
     <script src="../js//main.js"></script>
 </body>
+<script>
+    const fname = document.querySelector('#fname')
+    const lname = document.querySelector('#lname')
+    const phone = document.querySelector('#phone')
+    const live = document.querySelector('#live')
+    const city = document.querySelector('#city')
+    const email = document.querySelector('#email')
+    const form = document.getElementById('form')
+
+
+
+    form.addEventListener('submit', e => {
+        e.preventDefault()
+
+
+
+    })
+</script>
 
 </html>
