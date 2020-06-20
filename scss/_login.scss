@@ -7,6 +7,7 @@
     text-align: center;
     color: $main-color;
     padding: 3rem 4rem;
+    overflow: hidden;
 
 
 
@@ -112,21 +113,27 @@
     }
 }
 
-@media (max-width:500px) {
+@media (max-width:800px) {
 
     #login {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        text-align: center;
-        align-items: center;
 
 
+        .form {
+            label {
+                font-size: .8rem;
+            }
+
+            input {
+                &::-webkit-input-placeholder {
+                    font-size: .6rem;
+                }
+            }
+        }
 
         .container {
 
             h1 {
-                font-size: 1.7rem !important;
+                font-size: 1.2rem !important;
             }
 
             img {
