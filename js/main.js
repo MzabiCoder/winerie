@@ -1,5 +1,5 @@
 setTimeout(() => {
-    document.querySelector('#overlay').style.opacity = '0'
+    document.querySelector('#overlay').style.opacity = 0
 }, 3000)
 
 //AOS library effect on scroll 
