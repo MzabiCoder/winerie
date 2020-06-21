@@ -199,11 +199,7 @@ sr.reveal('#events_gallery .event img', {
     origin: 'bottom',
     distance: '40px'
 });
-// sr.reveal('#nav #title,#nav .list-menu,#hidden_menu li a ', {
-//     duration: 1500,
-//     origin: 'bottom',
-//     distance: '20px'
-// });
+
 
 
 sr.reveal('#press .press_container .image', {
@@ -223,18 +219,18 @@ sr.reveal('#press_list .wrapper', {
     distance: '100px'
 });
 
-// sr.reveal('#login .container,#membership .container', {
-//     duration: 3000,
-//     origin: 'left',
-//     distance: '100px'
-// });
+sr.reveal('#login .container,#membership .container', {
+    duration: 3000,
+    origin: 'left',
+    distance: '100px'
+});
 
 
-// sr.reveal('#login .form,#membership .form', {
-//     duration: 3000,
-//     origin: 'right',
-//     distance: '100px'
-// });
+sr.reveal('#login .form,#membership .form', {
+    duration: 3000,
+    origin: 'right',
+    distance: '100px'
+});
 
 const btn = document.querySelector('#ham')
 const general = document.querySelector('#general')

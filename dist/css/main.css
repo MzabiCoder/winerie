@@ -550,7 +550,7 @@
       #press_list .wrapper .right h1 {
         font-size: 2rem; }
 
-@media (max-width: 1250px) {
+@media (max-width: 1024px) {
   #press_list .wrapper .right h1 {
     font-size: 1.5rem; } }
 
