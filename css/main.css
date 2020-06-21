@@ -997,7 +997,7 @@
   #membership .form .form-control {
     margin: 0;
     padding: 0;
-    width: 50%;
+    width: 100%;
     margin: auto;
     margin-bottom: -1.6rem; }
     #membership .form .form-control input {
@@ -1022,6 +1022,8 @@
     font-size: 1.5rem !important; }
   #membership .form label {
     display: none; }
+  #membership .form .form-control {
+    width: 100%; }
   #membership .form #button {
     padding: .3rem;
     margin: .7rem auto;
@@ -1111,6 +1113,10 @@
     width: 20px;
     height: 20px;
     margin: .3rem 0rem; } }
+
+@media (max-width: 800px) {
+  #login .container h1 {
+    font-size: 1rem !important; } }
 
 * {
   box-sizing: border-box;
@@ -1394,6 +1400,6 @@ img {
   #general ul li a {
     font-size: 1rem; } }
 
-@media (min-width: 800px) {
+@media (max-width: 800px) {
   #general {
-    opacity: 0; } }
+    opacity: 1; } }
