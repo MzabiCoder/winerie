@@ -13,7 +13,13 @@
     .form-control small {
         color: red;
         transition: .8s ease-in-out;
-        opacity: 0;
+        opacity: 1;
+
+
+    }
+
+    .form-control.error input {
+        border-color: red !important;
 
     }
 </style>
@@ -87,7 +93,7 @@
             <h2>To speak with a representative from The Vines, please email us at veritas@the-vines.com.
                 We are also available by phone at +1 707 244 4545, or through Whatsapp and Instagram.</h2>
         </div>
-        <div class="form" id="form">
+        <form class="form" id="form">
             <div class="form-control">
                 <input type="text" id="fname" placeholder="Enter your first name">
                 <label for="">FIRST NAME</label>
@@ -119,7 +125,7 @@
                 <small></small>
             </div>
             <button id="button" type="submit">SUBMIT</button>
-        </div>
+        </form>
 
     </section>
 
@@ -182,12 +188,29 @@
     const city = document.querySelector('#city')
     const email = document.querySelector('#email')
     const form = document.getElementById('form')
+    let values = [fname, lname, phone, live, city, email]
 
+    function showError(input, message) {
+        const fomrControl = input.parentElement
+        fomrControl.classList.add('error')
+        const small = fomrControl.querySelector('small')
+        small.innerHTML = message
+        setTimeout(() => {
+            fomrControl.classList.remove('error')
+            small.innerHTML = ''
+        }, 1000)
+    }
 
-
+    function checkFields(inputs) {
+        inputs.forEach(input => {
+            if (input.value.trim() === '') {
+                showError(input, `${input.id.slice(0,1).toUpperCase()+input.id.slice(1)} is required!!`)
+            }
+        })
+    }
     form.addEventListener('submit', e => {
         e.preventDefault()
-
+        checkFields(values)
 
 
     })

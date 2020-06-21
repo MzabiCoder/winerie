@@ -391,8 +391,8 @@ img {
     }
 }
 
-@media (min-width:800px) {
+@media (max-width:800px) {
     #general {
-        opacity: 0;
+        opacity: 1;
     }
 }
