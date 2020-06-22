@@ -487,13 +487,17 @@
 
 @media (max-width: 1000px) {
   #about .container {
-    grid-template-columns: repeat(2, 1fr); } }
+    grid-template-columns: repeat(2, 1fr); }
+  #about #p {
+    font-size: 3rem; } }
 
 @media (max-width: 700px) {
   #about #p {
     visibility: hidden; }
   #about #h1 {
-    font-size: 2rem !important; }
+    font-size: 1.6rem !important; }
+  #about #members {
+    font-size: 1.3rem !important; }
   #about .container {
     grid-template-columns: 1fr; } }
 
