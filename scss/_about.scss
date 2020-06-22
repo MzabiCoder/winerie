@@ -107,16 +107,25 @@
   #about .container {
     grid-template-columns: repeat(2, 1fr);
   }
+  #about {
+   #p{
+     font-size: 3rem;
+   }
+  }
 }
 
 @media (max-width: 700px) {
   #about {
     #p {
-      visibility: hidden;
+     visibility: hidden;
     }
+     
 
     #h1 {
-      font-size: 2rem !important;
+      font-size: 1.6rem !important;
+    }
+    #members{
+      font-size: 1.3rem!important;
     }
 
     .container {
