@@ -13,6 +13,8 @@
     }
 }
 
+
+
 #events_gallery{
     display: grid;
     grid-template-columns: repeat(3,1fr);
@@ -22,6 +24,7 @@
     text-align: center;
     padding-bottom: 2rem;
     .event {
+        
        
         .line{
             
